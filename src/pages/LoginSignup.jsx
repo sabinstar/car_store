@@ -16,6 +16,7 @@ const LoginSignup = () => {
     const [errorMessage, setErrorMessage] = useState("");
     const [successMessage, setSuccessMessage] = useState("");
     const [showModal, setShowModal] = useState(false);
+    const [token, setToken] = useState(localStorage.getItem("jwt") || "");
 
     const closeModal = () => {
         setShowModal(false);
@@ -66,8 +67,9 @@ const LoginSignup = () => {
             setShowModal(true); // Show success modal
       
             // Handle JWT token if returned
-            if (data.token) {
-              localStorage.setItem("jwt", data.token); // Save token to localStorage
+            if (data.access_token) {
+                localStorage.setItem("jwt", data.access_token); // Save token
+                setToken(data.access_token); // Update state
             }
       
             setName("");
@@ -111,11 +113,14 @@ const LoginSignup = () => {
               const data = await response.json();
               setSuccessMessage("Login successful!");
               setShowModal(true); // Show success modal
-          
-              // Handle JWT token if present
-              if (data.token) {
-                localStorage.setItem("jwt", data.token); // Save token to localStorage
+
+              console.log(data);
+
+              if (data.access_token) {
+                localStorage.setItem("jwt", data.access_token); // Save token
+                setToken(data.access_token); // Update state
               }
+          
           
               // Clear inputs after a successful login
               setEmail("");
