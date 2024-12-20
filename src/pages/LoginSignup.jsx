@@ -6,7 +6,6 @@ import email_icon from '../assets/img/email.png';
 import Modal from "../assets/features/Modal.jsx";
 
 const LoginSignup = () => {
-
     const [action, setAction] = useState("Login");
     const [username, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -22,22 +21,25 @@ const LoginSignup = () => {
         setShowModal(false);
     };
 
+    const getToken = () => {
+        console.log(token);
+    };
 
+    getToken
     const handleRegister = async () => {
         setErrorMessage("");
         setSuccessMessage("");
 
-        // Validate form inputs
         if (!username.trim() || !email.trim() || !password.trim() || !confirm_password.trim()) {
             setErrorMessage("All fields are required.");
-            setShowModal(true); // Show modal for error
+            setShowModal(true); 
             return;
         }
 
 
         if (password !== confirm_password) {
             setErrorMessage("Passwords do not match.");
-            setShowModal(true); // Show modal for error
+            setShowModal(true); 
             return;
           }
       
@@ -68,8 +70,8 @@ const LoginSignup = () => {
       
             // Handle JWT token if returned
             if (data.access_token) {
-                localStorage.setItem("jwt", data.access_token); // Save token
-                setToken(data.access_token); // Update state
+                localStorage.setItem("jwt", data); 
+                setToken(data.access_token);
             }
       
             setName("");
@@ -117,7 +119,7 @@ const LoginSignup = () => {
               console.log(data);
 
               if (data.access_token) {
-                localStorage.setItem("jwt", data.access_token); // Save token
+                localStorage.setItem("jwt", data); // Save token
                 setToken(data.access_token); // Update state
               }
           

@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom"; // Импорт useNavigate
+import { useNavigate } from "react-router-dom";
 import { setCars } from "../assets/features/carsSlice";
 import NavbarFilter from "../components/NavbarFilter";
 import CarCard from "../components/CarCard";
 
 const HomePage = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate(); // Инициализация navigate
-  const cars = useSelector((state) => state.cars.cars); // Получаем список машин из Redux
-  const filters = useSelector((state) => state.cars.filters); // Получаем фильтры из Redux
+  const navigate = useNavigate(); 
+  const cars = useSelector((state) => state.cars.cars);
+  const filters = useSelector((state) => state.cars.filters); 
 
   const applyFilters = (cars, filters) => {
     return cars.filter((car) => {
@@ -24,7 +24,7 @@ const HomePage = () => {
     });
   };
   const resetFilters = () => {
-    setCars(initialCars); // Сбрасываем отфильтрованные машины и показываем все
+    setCars(initialCars); 
   };
 
   useEffect(() => {
