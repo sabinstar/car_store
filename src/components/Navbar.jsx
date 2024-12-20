@@ -25,7 +25,9 @@ const Navbar = () => {
           <Link to="/about" className="hover:text-primary transition duration-200 ease-linear">About Us</Link>
           <Link to="/product" className="hover:text-primary transition duration-200 ease-linear">Our Cars</Link>
           <Link to="/services" className="hover:text-primary transition duration-200 ease-linear">Services</Link>
-          <button className=" hidden lg:flex border-2 border-primary text-lg px-4 rounded-md hover:bg-primary transition duration-200 ease-linear">Sign In</button>
+          <Link to="/login-signup" className="hover:text-primary transition duration-200 ease-linear hidden lg:flex border-2 border-primary text-lg px-4 rounded-md hover:bg-primary transition duration-200 ease-linear">
+            Sign In
+          </Link>
         </div>
         <div className=" md:hidden flex items-center">
           {menu ? (

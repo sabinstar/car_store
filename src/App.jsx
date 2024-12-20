@@ -9,6 +9,8 @@ import ProductPage from './pages/ProductPage';
 import FavoritesPage from './pages/FavoritesPage';
 import HomePage from './pages/HomePage';
 import Navbar from './components/Navbar';
+import LoginSignup from './pages/LoginSignup';
+
 
 const initialCars = [
   {
@@ -116,6 +118,7 @@ const App = () => {
           <Route path="/cars" element={<Cars />} />
           <Route path="/services" element={<Services />} />
           <Route path="/product" element={<HomePage cars={cars} />} />
+          <Route path="/login-signup" element={<LoginSignup />} />
         </Routes>
       </BrowserRouter>
     </>
