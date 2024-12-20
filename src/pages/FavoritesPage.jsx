@@ -1,7 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+<<<<<<< HEAD
+import { removeFromFavorites } from "../../src/assets/features/carsSlice.js"; // Импортируем действие для удаления из избранного
+=======
 import { removeFromFavorites } from "../assets/features/carsSlice.js"; // Импортируем действие для удаления из избранного
+>>>>>>> 8d0589353c16cbfc5c2195bec0ebbb2af17e0972
 
 const FavoritesPage = () => {
   const navigate = useNavigate();
