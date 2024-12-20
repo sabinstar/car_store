@@ -119,7 +119,7 @@ const ProductPage = () => {
               {isFavorite ? "Удалить из избранного" : "Добавить в избранное"}
             </button>
             <button
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/product")}
               className="flex-1 py-2 px-4 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition"
             >
               Назад
