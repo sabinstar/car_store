@@ -12,7 +12,7 @@ const Navbar = () => {
     setMenu(!menu);
   };
   return (
-    <header className=" fixed w-full z-10 bg-secondary text-white py-4">
+    <header className=" w-full z-10 bg-secondary text-white py-4">
       {/* Desktop navigation section */}
       <nav className='container flex justify-between items-center'>
         <div className='flex items-center gap-2'>
@@ -23,7 +23,7 @@ const Navbar = () => {
           <Link to="/" 
           className="hover:text-primary transition duration-200 ease-linear">Home</Link>
           <Link to="/about" className="hover:text-primary transition duration-200 ease-linear">About Us</Link>
-          <Link to="/cars" className="hover:text-primary transition duration-200 ease-linear">Our Cars</Link>
+          <Link to="/product" className="hover:text-primary transition duration-200 ease-linear">Our Cars</Link>
           <Link to="/services" className="hover:text-primary transition duration-200 ease-linear">Services</Link>
           <button className=" hidden lg:flex border-2 border-primary text-lg px-4 rounded-md hover:bg-primary transition duration-200 ease-linear">Sign In</button>
         </div>
