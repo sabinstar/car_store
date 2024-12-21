@@ -22,6 +22,9 @@ const carsSlice = createSlice({
     setCars: (state, action) => {
       state.cars = action.payload;
     },
+    addCar: (state, action) => { // Добавляем возможность добавления новой машины
+      state.cars.push(action.payload);
+    },
     addToFavorites: (state, action) => {
       const car = action.payload;
       if (!state.favorites.some((fav) => fav.id === car.id)) {
@@ -48,5 +51,5 @@ const carsSlice = createSlice({
   },
 });
 
-export const { setCars, addToFavorites, removeFromFavorites, setFilters, resetFilters } = carsSlice.actions;
+export const { setCars, addCar, addToFavorites, removeFromFavorites, setFilters, resetFilters } = carsSlice.actions;
 export default carsSlice.reducer;

@@ -73,15 +73,15 @@ const LoginSignup = () => {
     const handleLogin = async () => {
         setErrorMessage("");
         setSuccessMessage("");
-
+    
         if (!email.trim() || !password.trim()) {
             setErrorMessage("Email and password are required.");
             setShowModal(true);
             return;
         }
-
+    
         const loginData = { emailOrUsername: email, password };
-
+    
         try {
             const response = await fetch("http://34.47.217.147:8080/api/auth/login", {
                 method: "POST",
@@ -90,23 +90,25 @@ const LoginSignup = () => {
                 },
                 body: JSON.stringify(loginData),
             });
-
+    
             if (!response.ok) {
                 const errorData = await response.json();
                 throw new Error(errorData.message || "Login failed.");
             }
-
+    
             const data = await response.json();
             setSuccessMessage("Login successful!");
             setShowModal(true);
-
-            // Save JWT token
-            if (data.token) {
-                localStorage.setItem("jwt", data.token);
+    
+            // **Сохранение access_token в localStorage**
+            if (data.access_token) {
+                localStorage.setItem("jwt", data.access_token); // Сохраняем токен в localStorage
+                console.log("JWT Token saved:", data.access_token);
+            } else {
+                throw new Error("Access token is missing in the response.");
             }
-            console.log(data.token);
-
-            // Clear inputs after successful login
+    
+            // Очистка полей после успешного входа
             setEmail("");
             setPassword("");
         } catch (error) {
@@ -114,6 +116,7 @@ const LoginSignup = () => {
             setShowModal(true);
         }
     };
+    
 
     const handleSignUpClick = () => {
         if (action === "Sign Up") {
