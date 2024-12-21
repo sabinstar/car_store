@@ -104,6 +104,7 @@ const LoginSignup = () => {
             if (data.token) {
                 localStorage.setItem("jwt", data.token);
             }
+            console.log(data.token);
 
             // Clear inputs after successful login
             setEmail("");
