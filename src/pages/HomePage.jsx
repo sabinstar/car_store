@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { setCars } from "../assets/features/carsSlice";
 import NavbarFilter from "../components/NavbarFilter";
 import CarCard from "../components/CarCard";
+// import car from "/src/ourcar.jpg";
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -38,7 +39,7 @@ const HomePage = () => {
           fuelType: "Бензин",
           engineVolume: 4.4,
           year: 2020,
-          image: "https://via.placeholder.com/600x400?text=BMW+X5",
+          image: "/src/ourcar1.jpg",
         },
         {
           id: 2,
@@ -48,7 +49,8 @@ const HomePage = () => {
           fuelType: "Дизель",
           engineVolume: 3.0,
           year: 2018,
-          image: "https://via.placeholder.com/600x400?text=Audi+A6",
+          image: "/src/ourcar2.jpg",
+
         },
         {
           id: 3,
@@ -58,7 +60,8 @@ const HomePage = () => {
           fuelType: "Бензин",
           engineVolume: 1.8,
           year: 2022,
-          image: "https://via.placeholder.com/600x400?text=Toyota+Corolla",
+          image: "/src/ourcar3.jpg",
+
         },
       ];
       dispatch(setCars(fetchedCars)); // Сохраняем машины в Redux store
