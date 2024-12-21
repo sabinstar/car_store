@@ -13,7 +13,7 @@ const FavoritesPage = () => {
   // Если нет избранных машин, показываем сообщение
   if (favoriteCars.length === 0) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-0">
         <h2 className="text-2xl font-bold text-orange-500 mb-4">
           Ваш список избранного пуст
         </h2>
@@ -33,7 +33,7 @@ const FavoritesPage = () => {
   };
 
   return (
-    <div className="bg-gray-900 min-h-screen p-6">
+    <div className="bg-gray-0 min-h-screen p-6">
       <h1 className="text-4xl font-bold text-center text-orange-500 mb-8">
         Избранные машины
       </h1>

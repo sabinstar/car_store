@@ -24,22 +24,22 @@ const NavbarFilter = () => {
   };
 
   return (
-    <div className="p-4 bg-gray-900 text-white shadow-lg">
+    <div className="p-4 bg-gray-0 text-white ">
       {/* Верхняя панель навигации */}
       <div className="flex justify-between items-center">
         {/* Логотип или заголовок */}
         
         {/* Ссылки на страницы */}
         <div className="flex space-x-6 text-lg font-medium">
-          <Link
+          {/* <Link
             to="/"
             className="hover:text-orange-400 transition-colors duration-300"
           >
             Главная
-          </Link>
+          </Link> */}
           <Link
             to="/favorites"
-            className="hover:text-orange-400 transition-colors duration-300"
+            className="text-black hover:text-orange-400 transition-colors duration-300"
           >
             Избранные
           </Link>

@@ -22,7 +22,6 @@ const Navbar = () => {
         <div className='hidden md:flex items-center gap-8 font-medium text-xl'>
           <Link to="/" 
           className="hover:text-primary transition duration-200 ease-linear">Home</Link>
-          <Link to="/about" className="hover:text-primary transition duration-200 ease-linear">About Us</Link>
           <Link to="/product" className="hover:text-primary transition duration-200 ease-linear">Our Cars</Link>
           <Link to="/services" className="hover:text-primary transition duration-200 ease-linear">Services</Link>
           <Link to="/login-signup" className="hover:text-primary transition duration-200 ease-linear hidden lg:flex border-2 border-primary text-lg px-4 rounded-md hover:bg-primary transition duration-200 ease-linear">
@@ -42,7 +41,6 @@ const Navbar = () => {
        md:hidden flex flex-col absolute bg-secondary text-white left-0 top-16 font-semibold text-2xl text-center pt-8 pb-4 gap-8 w-3/4 h-fit rounded-br-xl transition-transform duration-300`}
       >
           <a href="/" className="hover:text-primary transition duration-200 ease-linear">Home</a>
-          <a href="/" className="hover:text-primary transition duration-200 ease-linear">About Us</a>
           <a href="/" className="hover:text-primary transition duration-200 ease-linear">Our Cars</a>
           <a href="/" className="hover:text-primary transition duration-200 ease-linear">Services</a>
           <div>

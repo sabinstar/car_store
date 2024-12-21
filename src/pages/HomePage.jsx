@@ -72,7 +72,7 @@ const HomePage = () => {
   return (
     <>
     <NavbarFilter applyFilters={applyFilters} resetFilters={resetFilters}/>
-    <div className="bg-gray-900 min-h-screen p-8">
+    <div className="bg-gray-0 min-h-screen p-8">
       <h1 className="text-4xl font-bold text-center text-orange-500 mb-8">
         Каталог автомобилей
       </h1>

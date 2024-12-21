@@ -69,7 +69,7 @@ const ProductPage = () => {
   return (
     <>
     
-    <div className="bg-gray-900 min-h-screen p-8 font-poppins">
+    <div className="bg-gray-0 min-h-screen p-8 font-poppins">
       <div className="max-w-6xl mx-auto bg-gray-800 shadow-lg rounded-lg overflow-hidden flex flex-col md:flex-row">
         <div className="md:w-1/2">
           <img

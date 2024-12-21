@@ -21,9 +21,9 @@ const FeatureCard = ({ id, img, name, price }) => {
           <h2 className="font-medium text-gray-600">Starting at</h2>
           <h3 className="text-xl font-bold text-gray-900">${price}</h3>
         </div>
-        <button className="mt-4 text-primary font-medium hover:underline">
-          View Details →
-        </button>
+        <div className="mt-4 text-primary font-medium ">
+          →
+        </div>
       </div>
     </div>
   );
